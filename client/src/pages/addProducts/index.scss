@@ -1,0 +1,23 @@
+.add{
+    text-align: center;
+    margin-top: 40px;
+    .addProd{
+        margin-bottom: 15px;
+    }
+    .input{
+        margin-bottom: 15px;
+        input{
+            padding: 10px 10px;
+            width: 30%;
+            border: 1px solid #384AEB;
+        }
+    }
+    .subBtn{
+        margin: 15px 0;
+        padding: 10px 29px;
+        border: none;
+        background-color: #384AEB;
+        color: #fff;
+        border-radius: 19px;
+    }
+}

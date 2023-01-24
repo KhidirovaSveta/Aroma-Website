@@ -1,0 +1,116 @@
+#Home{
+    .container{
+        .home {
+            .purple-section{
+                display: flex;
+                .purple{
+                    background-color: #384AEB;
+                    position: absolute;
+                    left: 0;
+                    z-index: -1;
+                    width: 35%;
+                    height: 80%;
+                }
+                .imgbanner{
+                   position: absolute;
+                   z-index: 1;
+                   top: 17%;
+                   left: 17%;
+                }
+                .hometxt{
+                    margin-left: 50%;
+                    margin-top: 20%;
+
+                    .shop{
+                        font-size: 29px;
+                        color: rgb(109, 109, 109);
+                        margin-bottom: 25px;
+                    }
+                    .headermaintxt{
+                        margin-top: 15px;
+                        margin-bottom: 10px;
+                        font-size: 45px;
+                        color: rgb(36, 36, 36);
+                        font-weight: 700;
+                    }
+                    .descHead{
+                        margin: 15px 0;
+                        line-height: 32px;
+                        color: rgb(109, 109, 109);
+                    }
+                    .browseNowBtn{
+                        margin-top: 15px;
+                        font-size: 17px;
+                        padding: 15px 39px;
+                        border-radius: 25px;
+                        border: none;
+                        background-color: #384AEB;
+                        color: #fff;
+                        transition: all .4s;
+                        &:hover{
+                            background-color: #fff;
+                            border: 1px solid #384AEB;
+                            color: #000;
+                        }
+                    }
+
+                }
+            }
+            .second-section{
+                margin-top: 380px;
+                .popular{
+                    color: #8a8a8a;
+                }
+                .trendHeader{
+                    font-size: 35px;
+                    margin-bottom: 30px;
+                    font-family: 'Oswald', sans-serif;
+                }
+            }
+        }
+    }
+    .section-third{
+        margin-top: 110px;
+        margin-bottom: 50px;
+    }
+
+     .container{
+        .carouse-section{
+            margin-bottom: 90px;
+            .bestSelHead{
+                font-size: 35px;
+                font-family: 'Oswald', sans-serif;
+            }
+        }
+
+
+        .latestNews-section{
+            .Latest{
+                font-size: 31px;
+            }
+            .cards{
+                display: flex;
+                column-gap: 15px;
+                margin: 50px 0;
+                .title{
+                    display: flex;
+                    column-gap: 15px;
+                    color: rgb(153, 153, 153);
+                    margin-bottom: 15px;
+                }
+                .lastTitle{
+                    padding: 15px 0;
+                }
+                .parag{
+                    color: rgb(153, 153, 153);
+                    margin: 10px 0;
+                    line-height: 28px;
+                }
+                a{
+                    text-decoration: none;
+                    color: #000;
+                }
+            }
+        }
+     }
+}

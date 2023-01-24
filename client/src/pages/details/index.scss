@@ -1,0 +1,24 @@
+.container{
+    .goBackHome{
+        padding: 7px 18px;
+        background-color: #384AEB;
+        border: none;
+        border-radius: 18px;
+        color: #fff;
+    }
+    .ditails{
+        margin: 40px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 40px;
+
+        .deleteBtn{
+            margin-top: 15px;
+            padding: 7px 18px;
+            background-color: #750101d8;
+            border: none;
+            color: #fff;
+        }
+    }
+}

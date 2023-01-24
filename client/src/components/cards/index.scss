@@ -1,0 +1,24 @@
+#cards{
+    .search{
+        padding: 7px 10px;
+        width: 30%;
+    }
+
+    .sortBtn{
+        padding: 10px 28px;
+        margin-bottom: 20px;
+        background-color: #3642c7;
+        color: #fff;
+        border: none;
+        margin-right: 20px;
+    }
+    .container{
+        .Cards{
+            display: flex;
+            column-gap: 40px;
+            row-gap: 20px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+    }
+}
