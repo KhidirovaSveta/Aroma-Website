@@ -6,8 +6,9 @@ import "./index.scss"
 import { Link } from "react-router-dom";
 const { Meta } = Card;
 
-const Cards = () => {
+const Cards = ({wishlist, setWishlist}) => {
     const [products, setProgucts] = useState([])
+    const [toggle, setToggle] = useState(true)
     useEffect(() => {
         axios.get(`http://localhost:8080/`).then((data) => setProgucts(data.data))
     }, [])
@@ -20,19 +21,42 @@ const Cards = () => {
       })
     }
 
+    // const handleSort = () => {
+    //   let sort = products.sort((a, b) => a.price > b.price ? 1:-1 )
+    //   setProgucts([...sort])
+    // }
+    // const handleUnSort = () => {
+    //   let sort = products.sort((a, b) => b.price > a.price ? 1:-1 )
+    //   setProgucts([...sort])
+    // }
+
+     const handleDelete = (_id) => {
+      axios.delete(`http://localhost:8080/${_id}`).then((data) => axios.get(`http://localhost:8080/`).then((data) => setProgucts(data.data))
+      )
+     }
+     
     const handleSort = () => {
-      let sort = products.sort((a, b) => a.price > b.price ? 1:-1 )
-      setProgucts([...sort])
+      setToggle(!toggle) 
+      if(toggle){
+        let searchByPrice = products.sort((a, b) => a.price - b.price)
+        setProgucts([...searchByPrice])
+      }else{
+        axios.get(`http://localhost:8080/`).then((data) => setProgucts(data.data))
+      }
     }
-    const handleUnSort = () => {
-      let sort = products.sort((a, b) => b.price > a.price ? 1:-1 )
-      setProgucts([...sort])
+
+    const handleAddWishlist = (el) => {
+      if(!wishlist.find((w) => w._id === el._id)) {
+        setWishlist([...wishlist, el])
+      } else{
+        axios.get(`http://localhost:8080/`).then((data) => setProgucts(data.data))
+      }
     }
 
   return (
     <div id="cards">
-      <button onClick={() => handleUnSort()} className="sortBtn"> High price </button>
-      <button onClick={() => handleSort()} className="sortBtn"> Low price </button>
+      <button onClick={() => handleSort()} className="sortBtn"> High price </button>
+      {/* <button onClick={() => handleSort()} className="sortBtn"> Low price </button> */}
       <input type="text" onChange={(e) => handleSearch(e.target.value)} className="search" placeholder='Search here'/>
     <div className="container">
     <div className='Cards'>
@@ -49,6 +73,8 @@ const Cards = () => {
             <Meta title={product.name} description={`$${product.price}`} />
               </div>
               </Link>
+              <button onClick={() => handleDelete(product._id)} className="trash"><i className="fa-solid fa-trash"></i></button>
+              <button onClick={() => handleAddWishlist(product)} className="wishBtn"> {wishlist.find((wish) => wish._id === product._id) ? <i className="fa-solid fa-heart"></i> : <i className="fa-regular fa-heart"></i>}</button>
           </Card>
             )
         })}

@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import {Helmet} from 'react-helmet'
 
 import "./index.scss"
-const Home = () => {
+const Home = ({wishlist, setWishlist}) => {
   return (
     <div id='Home'>
       <Helmet>
@@ -36,7 +36,7 @@ const Home = () => {
                 <div className="second-section">
                   <p className='popular'>Popular Item in the market</p>
                   <h2 className='trendHeader'>Trending Product</h2>
-               <Cards/>
+               <Cards wishlist={wishlist} setWishlist={setWishlist}/>
                </div>
 
 

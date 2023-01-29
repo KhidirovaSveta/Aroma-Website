@@ -108,6 +108,8 @@ const Header = () => {
                  <div className="icons">
                     <NavLink> <i className="fa-solid fa-magnifying-glass"></i> </NavLink>
                     <NavLink> <i className="fa-solid fa-cart-shopping"></i> </NavLink>
+                    <NavLink to={"/wishlist"}> <i className="fa-regular fa-heart"></i> </NavLink>
+                    
                    <button className='headerBtn'> Buy Now </button>
                  </div>
 

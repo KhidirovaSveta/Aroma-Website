@@ -31,7 +31,7 @@ const Detail = () => {
 
       <button onClick={() => navigate(-1)} className="goBackHome"> Back </button>
       <div className="ditails">
-        <img src={detail.img} alt="" />
+        <img src={detail.img} alt="" width={"350px"}/>
         <div className="details-info">
         <h1>{detail.name}</h1>
         <p>{detail.price}</p>

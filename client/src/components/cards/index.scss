@@ -19,6 +19,24 @@
             row-gap: 20px;
             flex-wrap: wrap;
             text-align: center;
+           .trash{
+            background-color: transparent;
+            border: none;
+            margin-right: 7px;
+            .fa-trash{
+                font-size: 15px;
+                color: #333;
+            }
+           }
+            .wishBtn{
+                margin: 14px 0;
+                background-color: transparent;
+                border: none;
+                .fa-heart{
+                    font-size: 17px;
+                    color: rgb(215, 0, 0);
+                }
+            }
         }
     }
 }

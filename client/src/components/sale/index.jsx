@@ -5,7 +5,7 @@ import "./index.scss"
 const Sale = () => {
   return (
     <div id='Sala'>
-        <img src={sale} alt="" />
+        <img src={sale} alt="" width={"100%"}/>
         <div className="saletxt">
           <h3 className='upTo'>Up To 50% Off</h3>
           <p className='winterTxt'>Winter Sale</p>
